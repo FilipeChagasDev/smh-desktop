@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./styles.css" rel="stylesheet">
+  <link href="../components/sidenav-style.css" rel="stylesheet">
+  <script src="../components/sidenav.js"></script>
+  <title>SMH</title>
+</head>
+
+<body>
+  <sidenav-component 
+    selected="pacientes"
+    atividade-href="./atividade.html"
+    hospitais-href="./hospitais.html"
+    funcionarios-href="./funcionarios.html"
+    pacientes-href="./pacientes.html">
+  </sidenav-component>
+
+  <div class="content">
+    <div style="background-color: green; margin: 100px;">
+      HELLO
+    </div>
+  </div>
+  
+  <script src="./pacientes.js"></script>
+
+</body>
+
+</html>
