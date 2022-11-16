@@ -8,25 +8,42 @@
     content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
   <link href="./styles.css" rel="stylesheet">
   <link href="../components/sidenav-style.css" rel="stylesheet">
+  <link href="../components/table-style.css" rel="stylesheet">
+  <link href="../components/select-style.css" rel="stylesheet">
   <script src="../components/sidenav.js"></script>
+  <script src="../components/table.js"></script>
+  <script src="../components/select.js"></script>
   <title>SMH</title>
 </head>
 
+<!-- SVG Sprites-->
+<svg class="sprites">
+  <symbol id="select-arrow-down" viewbox="0 0 10 6">
+    <polyline points="1 1 5 5 9 1"></polyline>
+  </symbol>
+</svg>
+
 <body>
-  <sidenav-component 
-    selected="atividade"
-    atividade-href="./atividade.html"
-    hospitais-href="./hospitais.html"
-    funcionarios-href="./funcionarios.html"
-    pacientes-href="./pacientes.html">
+  <sidenav-component selected="atividade" atividade-href="./atividade.html" hospitais-href="./hospitais.html"
+    funcionarios-href="./funcionarios.html" pacientes-href="./pacientes.html">
   </sidenav-component>
 
   <div class="content">
-    <div style="background-color: green; margin: 100px;">
-      HELLO
+    <div style="margin-top: 10px;">
+      <div class="control-box">
+        <div style="text-align: center;">
+          Hospital:
+          <input type="text" class="input" id="in-hospital" style="display: inline-block; width: 300px; margin-right: 10px;">
+          Quarto:
+          <input type="text" class="input" id="in-quarto" style="display: inline-block; width: 100px; margin-right: 10px;">
+          <button class="button-13" style="display: inline-block; margin-right: 10px;" id="btn-buscar">Buscar</button>
+          <button class="button-13" style="display: inline-block;" id="btn-atualizar">Atualizar</button>
+        </div>
+      </div>
+      <table-component columns="Hospital,Quarto,Qtd de pessoas,Qtd de pacientes,Qtd de profissionais,Horário,Ação" id="tabela"></table-component>
     </div>
   </div>
-  
+
   <script src="./atividade.js"></script>
 
 </body>

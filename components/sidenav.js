@@ -54,6 +54,7 @@ class SideNav extends HTMLElement
             </li>
             </ul>
         
+            <!--
             <div class="sidenav__divider sm6-margin-y-xs" role="presentation"></div>
         
             <ul class="sidenav__list">
@@ -70,6 +71,7 @@ class SideNav extends HTMLElement
                 <span class="sidenav__text sm6-text-xs">Usuário</span>
                 </a>
             </li>
+            -->
             </ul>
         </nav>
       </div>

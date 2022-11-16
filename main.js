@@ -7,11 +7,12 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
-    minHeight: 800,
-    minWidth: 1200,
+    minHeight: 700,
+    minWidth: 1000,
+    autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true
+      nodeIntegration: true,
     }
   })
 

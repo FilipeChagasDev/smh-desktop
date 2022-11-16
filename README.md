@@ -1,40 +1,30 @@
-# electron-quick-start
+# Sistema de Monitoramento Hospitalar (SMH) - Desktop
 
-**Clone and run for a quick way to see Electron in action.**
+Este aplicativo desktop, desenvolvido com o framework Electron.js, é um trabalho da disciplina "Projetos de Engenharia de Computação II", do curso de Engenharia de Computação da UFMT. 
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start) within the Electron documentation.
+## Integrantes do grupo (ordem alfabética)
+* Alisson Cerutti
+* André Reliquias
+* Elton M Lima
+* Filipe Chagas
+* Giulianna Moretti
+* Igor da Silva Carneiro
+* Matheus de Souza Carvalho
+* Michael Nunes Cardoso Macedo
 
-A basic Electron application needs just these files:
+## Para fazer
+* Adicionar as páginas de cadastramento (janela separada)
+* Adicionar páginas de visualização de cadastro (janela separada)
+* Adicionar uma página de autenticação de usuário (janela separada)
+* Adicionar uma página de visualização de atividade (janela separada)
+* Adicionar a integração com o back-end
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-- `preload.js` - A content script that runs before the renderer process loads.
+## Prints
 
-You can learn more about each of these components in depth within the [Tutorial](https://electronjs.org/docs/latest/tutorial/tutorial-prerequisites).
+![img1](docs/prints/print-atividade.png)
 
-## To Use
+![img2](docs/prints/print-hospitais.png)
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+![img3](docs/prints/print-funcionarios.png)
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
-
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
-
-## Resources for Learning Electron
-
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [Electron Fiddle](https://electronjs.org/fiddle) - Electron Fiddle, an app to test small Electron experiments
-
-## License
-
-[CC0 1.0 (Public Domain)](LICENSE.md)
+![img4](docs/prints/print-pacientes.png)

@@ -8,7 +8,11 @@
     content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
   <link href="./styles.css" rel="stylesheet">
   <link href="../components/sidenav-style.css" rel="stylesheet">
+  <link href="../components/table-style.css" rel="stylesheet">
+  <link href="../components/select-style.css" rel="stylesheet">
   <script src="../components/sidenav.js"></script>
+  <script src="../components/table.js"></script>
+  <script src="../components/select.js"></script>
   <title>SMH</title>
 </head>
 
@@ -22,8 +26,17 @@
   </sidenav-component>
 
   <div class="content">
-    <div style="background-color: green; margin: 100px;">
-      HELLO
+    <div style="margin-top: 10px;">
+      <div class="control-box">
+        <div style="text-align: center;">
+          <select-component options="Nome,CPF,Profissão,Especialidade,Hospital,ID" id="slct-filtro"></select-component>
+          <input type="text" class="input" id="in-busca" style="display: inline-block; width: 400px;">
+          <button class="button-13" style="display: inline-block;" id="btn-buscar">Buscar</button>
+          <button class="button-13" style="display: inline-block;" id="btn-atualizar">Atualizar</button>
+          <button class="button-13" style="display: inline-block;" id="btn-cadastrar">Cadastrar</button>
+        </div>
+      </div>
+      <table-component columns="ID,Nome,CPF,Profissão,Especialidade,Hospital,Ação" id="tabela"></table-component>
     </div>
   </div>
   
