@@ -26,4 +26,8 @@
         console.log(slctBusca.getOption())
         console.log(inBusca.value)
     })
+
+    btnCadastrar.addEventListener('click', (event)=>{
+        window.electronAPI.openCadastrarHospital()
+    })
 })()

@@ -5,6 +5,16 @@
  * 
  * https://www.electronjs.org/docs/latest/tutorial/sandbox
  */
+
+const { contextBridge, ipcRenderer } = require('electron')
+
+contextBridge.exposeInMainWorld('electronAPI', {
+  consoleLog: (title) => ipcRenderer.send('console-log', title),
+  openCadastrarFuncionario: () => ipcRenderer.send('open-cadastrar-funcionario'),
+  openCadastrarHospital: () => ipcRenderer.send('open-cadastrar-hospital'),
+  openCadastrarPaciente: () => ipcRenderer.send('open-cadastrar-paciente')
+})
+
 window.addEventListener('DOMContentLoaded', () => {
   const replaceText = (selector, text) => {
     const element = document.getElementById(selector)

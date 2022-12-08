@@ -1,6 +1,55 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, ipcMain} = require('electron')
 const path = require('path')
+
+function handleConsoleLog (event, text) {
+  console.log(text)
+}
+
+function openCadastrarFuncionario(event) {
+  const mainWindow = new BrowserWindow({
+    width: 1000,
+    height: 500,
+    autoHideMenuBar: true,
+    maximizable: false,
+    minimizable: false,
+    webPreferences: {
+      //preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true,
+    }
+  })
+  mainWindow.loadFile('./pages/cadastrar/funcionario.html')
+}
+
+function openCadastrarHospital(event) {
+  const mainWindow = new BrowserWindow({
+    width: 1000,
+    height: 500,
+    autoHideMenuBar: true,
+    maximizable: false,
+    minimizable: false,
+    webPreferences: {
+      //preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true,
+    }
+  })
+  mainWindow.loadFile('./pages/cadastrar/hospital.html')
+}
+
+function openCadastrarPaciente(event) {
+  const mainWindow = new BrowserWindow({
+    width: 1000,
+    height: 500,
+    autoHideMenuBar: true,
+    maximizable: false,
+    minimizable: false,
+    webPreferences: {
+      //preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true,
+    }
+  })
+  mainWindow.loadFile('./pages/cadastrar/paciente.html')
+}
 
 function createWindow () {
   // Create the browser window.
@@ -18,9 +67,10 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('./pages/atividade.html')
+  //mainWindow.loadFile('./pages/cadastrar/funcionario.html')
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -29,11 +79,17 @@ function createWindow () {
 app.whenReady().then(() => {
   createWindow()
 
+  ipcMain.on('console-log', handleConsoleLog)
+  ipcMain.on('open-cadastrar-funcionario', openCadastrarFuncionario)
+  ipcMain.on('open-cadastrar-hospital', openCadastrarHospital)
+  ipcMain.on('open-cadastrar-paciente', openCadastrarPaciente)
+
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
+
 })
 
 // Quit when all windows are closed, except on macOS. There, it's common

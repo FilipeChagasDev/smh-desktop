@@ -11,6 +11,7 @@ Este aplicativo desktop, desenvolvido com o framework Electron.js, é um trabalh
 * Igor da Silva Carneiro
 * Matheus de Souza Carvalho
 * Michael Nunes Cardoso Macedo
+* Rafael Simões Martins da Silva Oliveira
 
 ## Para fazer
 * Adicionar as páginas de cadastramento (janela separada)

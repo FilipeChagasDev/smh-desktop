@@ -27,4 +27,12 @@
         console.log(slctBusca.getOption())
         console.log(inBusca.value)
     })
+
+    btnAtualizar.addEventListener('click', (event)=>{
+        /*...*/
+    })
+
+    btnCadastrar.addEventListener('click', (event)=>{
+        window.electronAPI.openCadastrarFuncionario()
+    })
 })()

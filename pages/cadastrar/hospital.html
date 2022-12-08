@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="./../styles.css" rel="stylesheet">
+  <link href="../components/sidenav-style.css" rel="stylesheet">
+  <link href="../components/table-style.css" rel="stylesheet">
+  <link href="../components/select-style.css" rel="stylesheet">
+  <script src="../components/sidenav.js"></script>
+  <script src="../components/table.js"></script>
+  <script src="../components/select.js"></script>
+  <title>SMH</title>
+</head>
+
+<body>
+
+      <div class="control-box" style="margin: 1cm">
+        <div style="text-align: center;">
+            <div>
+                Nome completo:
+                <input type="text" class="input" id="in-busca" style="display: inline-block; width: 400px; margin-top: 10px;">
+            </div>
+            <div>
+                Endereço:
+                <input type="text" class="input" id="in-busca" style="display: inline-block; width: 400px; margin-top: 10px;">
+            </div>
+            <div>
+                Telefone:
+                <input type="text" class="input" id="in-busca" style="display: inline-block; width: 400px; margin-top: 10px;">
+            </div>
+            <div>
+                CNPJ:
+                <input type="text" class="input" id="in-busca" style="display: inline-block; width: 400px; margin-top: 10px;">
+            </div>
+        </div>
+        <button class="button-13" style="display: inline-block;" id="btn-cadastrar">Cadastrar</button>
+      </div>
+      
+  
+  <script src="./funcionarios.js"></script>
+
+</body>
+
+</html>

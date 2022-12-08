@@ -23,7 +23,11 @@
     }
 
     btnBuscar.addEventListener('click', (event)=>{
-        console.log(inHospital.value)
-        console.log(inQuarto.value)
+        //console.log(inHospital.value)
+        //console.log(inQuarto.value)
+    })
+
+    btnAtualizar.addEventListener('click', (event)=>{
+        /*...*/
     })
 })()
